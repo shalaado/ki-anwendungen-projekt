@@ -1,0 +1,9 @@
+body_type,default_seats
+Hatchback,5
+Sedan,5
+SUV,5
+Coupe,4
+Pickup,5
+Convertible,4
+Van,7
+Wagon,5

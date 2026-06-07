@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+
+# Local caches
+.cache/
+.mypy_cache/
+.pytest_cache/
+
+# Editor / IDE
+.idea/
+.vscode/
+
+# Local credentials (never commit!)
+*.key
+*.pem
+
+# Hugging Face / Gradio caches
+.gradio/
+flagged/
