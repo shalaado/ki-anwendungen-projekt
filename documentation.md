@@ -157,15 +157,15 @@ sibling PNGs. Key findings:
   Right-skewed (skew = **2.59**) on the linear scale; after `log1p` the
   skew drops to **0.52** (near-symmetric), which motivates the log-target
   in iteration 3.
-  ![Linear price distribution](artifacts\eda\price_distribution.png)
-  ![After log1p](artifacts\eda\log_price_distribution.png)
+  ![Linear price distribution](artifacts/eda/price_distribution.png)
+  ![After log1p](artifacts/eda/log_price_distribution.png)
 
 - **Strongest numeric predictors** (Pearson r with `log(price)`):
   `hp_per_year` = **+0.86**, `hp` = **+0.71**, `car_age` = **−0.68**,
   `mileage_km` = **−0.47**, `km_per_year` = **−0.36**. The engineered
   `hp_per_year` is the single strongest linear signal.
-  ![Correlations](artifacts\eda\correlations.png)
-  ![car_age vs log(price)](artifacts\eda\age_vs_price.png)
+  ![Correlations](artifacts/eda/correlations.png)
+  ![car_age vs log(price)](artifacts/eda/age_vs_price.png)
 
 - **Categorical breakdowns**:
   - Diesel median **12 480 EUR** vs. Gasoline median **9 990 EUR** (~1.25×).
@@ -173,9 +173,9 @@ sibling PNGs. Key findings:
     a price-premium signal so strong that the model relies on it heavily.
   - Brand medians across the top-10 (by count) range from Opel
     (~8 980 EUR) to Audi (~23 890 EUR).
-  ![Price by fuel](artifacts\eda\price_by_fuel.png)
-  ![Price by gear](artifacts\eda\price_by_gear.png)
-  ![Top-10 brands](artifacts\eda\price_by_brand_top10.png)
+  ![Price by fuel](artifacts/eda/price_by_fuel.png)
+  ![Price by gear](artifacts/eda/price_by_gear.png)
+  ![Top-10 brands](artifacts/eda/price_by_brand_top10.png)
 
 - **Anomalies and data-quality issues**:
   - `mileage` values capped at 500 000 km during cleaning to remove
@@ -453,7 +453,7 @@ is processed end-to-end, the LLM produces the German explanation, and the
 ML pipeline returns ~42 818 EUR. No photo uploaded, so the CV block is not
 triggered.
 
-![Text-only request](screenshots\screenshot_text_only.png)
+![Text-only request](screenshots/screenshot_text_only.png)
 
 **Screenshot 2 — Combined text + photo request.** With a Mercedes-Benz CLS
 photo dropped in, the CV block fires (see the bottom accordion: `body_type:
@@ -462,7 +462,7 @@ merged into the ML feature row alongside the NLP extraction
 (`brand: "Mercedes-Benz"`, `model: "CLS 350"`, `year: 2019`, …) and the
 final prediction is again ~42 818 EUR.
 
-![Text and image request — full integration of ML + NLP + CV](screenshots\screenshot_text_and_image.png)
+![Text and image request — full integration of ML + NLP + CV](screenshots/screenshot_text_and_image.png)
 
 Guidance hint: Deployment must be usable.
 Evidence hint: Add screenshots or short demo references.
